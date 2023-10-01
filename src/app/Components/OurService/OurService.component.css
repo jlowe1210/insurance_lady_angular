@@ -1,0 +1,72 @@
+.section_header {
+  text-align: center;
+  color: #68a0fc;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.section_header h1 {
+  font-weight: 300;
+}
+
+.services_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service_image_container {
+  text-align: center;
+}
+
+.service_image_container img {
+  display: block;
+  width: 100%;
+}
+
+.service_card_container {
+  max-width: 425px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.service_card {
+  width: 80%;
+  margin: 0 auto;
+  border: 0.4px solid lightgray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.service_title h3 {
+  text-align: center;
+  font-size: 25px;
+  margin: 10px 0;
+  color: #68a0fc;
+}
+
+.service_text {
+  text-align: center;
+}
+.service_text p {
+  line-height: 30px;
+  padding: 0 8px;
+}
+
+.link_btn {
+  margin: 5px auto;
+  display: flex;
+  background-color: #68a0fc;
+  width: 120px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.link_btn:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}

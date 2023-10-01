@@ -1,0 +1,21 @@
+.arrow_img_container {
+  text-align: center;
+  margin: 20px 0;
+  margin-bottom: -6px;
+}
+
+.arrow_img_container img {
+  animation: jumpInfinite 1.5s infinite;
+}
+
+@keyframes jumpInfinite {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

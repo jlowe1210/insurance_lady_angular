@@ -1,0 +1,74 @@
+.section_header {
+  text-align: center;
+  color: #68a0fc;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.section_header h1 {
+  font-weight: 300;
+}
+
+.appointment_form {
+  text-align: center;
+}
+
+.appointment_form input,
+select {
+  display: block;
+  padding: 15px 5px;
+  font-size: 19px;
+  border-radius: 3px;
+  border: 0.3px solid #68a0fc;
+  color: #68a0fc;
+  margin: 0 auto;
+  width: 400px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.section_container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.image_container {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.submit_btn {
+  background-color: #68a0fc;
+  width: 120px;
+  height: 40px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit_btn:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
+.form_container {
+  align-self: center;
+}
+
+.form_container p {
+  font-size: 25px;
+}

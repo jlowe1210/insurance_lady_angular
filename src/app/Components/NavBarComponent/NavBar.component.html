@@ -1,0 +1,123 @@
+<div>
+  <div class="navbar_toolbar-container">
+    <container>
+      <p class="navbar_toolbar-container_text">
+        Welcome to Insurance Lady Inc
+      </p></container
+    >
+  </div>
+  <div>
+    <container>
+      <div class="details_container_mobile">
+        <div class="menu_icon_container">
+          <img
+            (click)="this.mobileNavToggle()"
+            src="../../../assets/images/hamburger.png"
+            alt="hamburger icon"
+            width="30"
+            height="30"
+          />
+        </div>
+        <div class="mobile_details_container" *ngIf="this.mobileToggle">
+          <div class="mobile_details">
+            <div class="navbar_logo-container">
+              <img
+                class="navbar_logo-container_logo"
+                src="../../../assets/images/logo.png"
+                width="50"
+                height="50"
+              />
+              <p class="mobile_logo_text">The Insurance Lady</p>
+            </div>
+
+            <div class="mobile_detail">
+              <img
+                class="detail_image"
+                src="../../../assets/images/phone-call.png"
+              />
+              <div>
+                <p>Need help?</p>
+                <p>+1(404) 246-2528</p>
+              </div>
+            </div>
+            <div class="mobile_detail">
+              <img
+                class="detail_image"
+                src="../../../assets/images/location.png"
+              />
+              <div>
+                <p>236 Stockbridge Road Suite 15</p>
+                <p>Jonesboro, GA 30236</p>
+              </div>
+            </div>
+            <div class="mobile_detail">
+              <img
+                class="detail_image"
+                src="../../../assets/images/clock.png"
+              />
+              <div>
+                <p>07:30 am - 05:30 pm</p>
+                <p>Mon-Fri</p>
+              </div>
+            </div>
+            <button class="qoute_btn" (click)="scroll('bookNowRef')">
+              Get a Quote
+            </button>
+          </div>
+        </div>
+      </div>
+    </container>
+    <container>
+      <div class="details_container_desktop">
+        <div class="navbar_logo-container">
+          <img
+            class="navbar_logo-container_logo"
+            src="../../../assets/images/logo.png"
+            width="50"
+            height="50"
+          />
+          <p class="navbar_logo-container_text">The Insurance Lady</p>
+        </div>
+        <div class="detail">
+          <img
+            class="detail_image"
+            src="../../../assets/images/phone-call.png"
+          />
+          <div>
+            <p>Need help?</p>
+            <p>+1(404) 246-2528</p>
+          </div>
+        </div>
+        <div class="detail">
+          <img class="detail_image" src="../../../assets/images/location.png" />
+          <div>
+            <p>236 Stockbridge Road Suite 15</p>
+            <p>Jonesboro, GA 30236</p>
+          </div>
+        </div>
+        <div class="detail">
+          <img class="detail_image" src="../../../assets/images/clock.png" />
+          <div>
+            <p>07:30 am - 05:30 pm</p>
+            <p>Mon-Fri</p>
+          </div>
+        </div>
+        <button class="qoute_btn" (click)="scroll('bookNowRef')">
+          Get a Quote
+        </button>
+      </div>
+    </container>
+    <div class="navbar_container">
+      <container>
+        <div>
+          <ul class="navbar_items_container">
+            <li (click)="scroll('aboutSectionRef')">About</li>
+            <li (click)="scroll('ourServiceRef')">Services</li>
+            <li (click)="scroll('bookNowRef')">Book now</li>
+            <li (click)="scroll('ContactRef')">Contact</li>
+          </ul>
+        </div>
+      </container>
+    </div>
+  </div>
+</div>

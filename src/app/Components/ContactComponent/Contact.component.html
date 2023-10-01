@@ -1,0 +1,91 @@
+<div>
+  <container>
+    <div class="section_header">
+      <h1>Contact us</h1>
+    </div>
+
+    <div class="section_container">
+      <div class="contact_info_container">
+        <div class="contact_info">
+          <img src="../../../assets/images/phone-call.png" />
+
+          <div>
+            <h3>Business Number</h3>
+            <p>+1(404) 246-2528</p>
+          </div>
+        </div>
+        <div class="contact_info">
+          <img src="../../../assets/images/fax-machine.png" />
+          <div>
+            <h3>Fax Number</h3>
+            <p>+1(866) 594-1881</p>
+          </div>
+        </div>
+        <div class="contact_info">
+          <img src="../../../assets/images/email.png" />
+          <div>
+            <h3>Business Email</h3>
+            <p>theinsuranceladyinc@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact_info">
+          <img src="../../../assets/images/location.png" />
+          <div>
+            <h3>Business Address</h3>
+            <p>
+              The Insurance Lady Of Atlanta #1 Insurance Sales & Education 238
+              Stockbridge Road,Suite203. Jonesboro,GA 30236.
+            </p>
+          </div>
+        </div>
+        <div class="contact_info">
+          <img src="../../../assets/images/clock.png" />
+          <div>
+            <h3>Business Hours</h3>
+            <p>10:00 AM – 08:00 PM Monday – Friday</p>
+          </div>
+        </div>
+      </div>
+      <form
+        #form="ngForm"
+        class="contact_form"
+        (submit)="handleMessageForm(form)"
+      >
+        <div class="name_and_email_container">
+          <input
+            name="fullname"
+            type="text"
+            placeholder="Name"
+            ngModel
+            required
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="email"
+            ngModel
+            required
+            email
+          />
+        </div>
+        <textarea
+          name="message"
+          placeholder="Message..."
+          ngModel
+          required
+        ></textarea>
+        <button
+          *ngIf="!messageSent"
+          [disabled]="!form.valid || sendingMessage"
+          class="submit_btn"
+        >
+          {{ sendingMessage ? "Sending message" : "Send" }}
+        </button>
+        <p class="response" *ngIf="messageSent">Message Sent! Thank You</p>
+        <p class="response" *ngIf="serverError && !messageSent">
+          Unable to send message, Call or please try again later
+        </p>
+      </form>
+    </div>
+  </container>
+</div>

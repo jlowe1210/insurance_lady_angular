@@ -1,0 +1,52 @@
+.section_header {
+  text-align: center;
+  color: #68a0fc;
+  margin-bottom: 20px;
+}
+
+.section_header h1 {
+  font-weight: 300;
+}
+
+.card {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 0.2px solid lightgray;
+  text-align: center;
+  background-color: #fafafa;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.card_image_container {
+  width: 140px;
+  margin: 0 auto;
+  /* border-radius: 100%; */
+  border: 0.3px solid #68a0fc;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.card_image_container img {
+  display: block;
+  width: 100%;
+}
+
+.card_top {
+  padding: 10px 0;
+}
+
+.card_name_tagline {
+  font-size: 12px;
+}
+
+.card_name {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.card_text {
+  font-size: 16px;
+  line-height: 25px;
+}

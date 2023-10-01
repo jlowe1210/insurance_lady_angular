@@ -1,0 +1,93 @@
+<div class="page_container">
+  <container>
+    <div class="section_header">
+      <h1>Book consultation now!</h1>
+    </div>
+    <div class="section_container">
+      <div class="image_container">
+        <img class="image" src="../../../assets/images/consultation.webp" />
+      </div>
+      <div class="form_container">
+        <p *ngIf="ConsultationBooked">Consultation Booked! Thank you</p>
+        <p *ngIf="serverError && !ConsultationBooked">
+          Unable to book Consultation, Call to book or try again later.
+        </p>
+        <form
+          *ngIf="!ConsultationBooked"
+          #form="ngForm"
+          class="appointment_form"
+          (submit)="handleConsultationForm(form)"
+        >
+          <label for="category">Category</label>
+          <select id="category" name="category" [(ngModel)]="defaultCategory">
+            <option value="Insurance">Insurance</option>
+          </select>
+          <label for="service">Services</label>
+          <select id="service" name="service" [(ngModel)]="defaultService">
+            <option *ngFor="let service of services" [ngValue]="service">
+              {{ service }}
+            </option>
+          </select>
+          <label for="Agent">Agent</label>
+          <select id="Agent" name="agent" [(ngModel)]="defaultAgent">
+            <option value="Caroline Opurum">Caroline Opurum</option>
+          </select>
+          <label for="appointment_time">Consultation date</label>
+          <input
+            id="appointment_time"
+            type="datetime-local"
+            name="consultation_time"
+            [(ngModel)]="defaultAppointmentTime"
+            [min]="defaultAppointmentTime"
+          />
+          <label for="fullname">Full Name</label>
+
+          <div
+            [ngStyle]="{ color: 'red' }"
+            *ngIf="fullname.errors?.['required']  && (fullname.dirty || fullname.touched)"
+          >
+            Name is required.
+          </div>
+          <input
+            id="fullname"
+            type="text"
+            placeholder="John Doe"
+            required
+            name="fullname"
+            #fullname="ngModel"
+            ngModel
+          />
+          <label for="phone number">Phone number</label>
+          <div
+            [ngStyle]="{ color: 'red' }"
+            *ngIf="phonenumber.errors?.['required']  && (phonenumber.dirty || phonenumber.touched)"
+          >
+            Phone number is required
+          </div>
+          <div
+            [ngStyle]="{ color: 'red' }"
+            *ngIf="phonenumber.errors?.['pattern']  && (phonenumber.dirty || phonenumber.touched)"
+          >
+            Please format number correctly example. 123 456 7891
+          </div>
+
+          <input
+            id="phone number"
+            type="tel"
+            required
+            placeholder="914 171 1222"
+            name="phonenumber"
+            pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
+            maxlength="12"
+            #phonenumber="ngModel"
+            ngModel
+          />
+
+          <button [disabled]="!form.valid || booking" class="submit_btn">
+            {{ booking ? "Booking" : "Submit" }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </container>
+</div>
